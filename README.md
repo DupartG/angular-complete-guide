@@ -3,5 +3,4 @@ Versions used:
 - Angular 22
 
 
-
-ng new first-angular-app --no-zoneless
+Each folder contain an angular app corresponding to the subject studied for each lesson
