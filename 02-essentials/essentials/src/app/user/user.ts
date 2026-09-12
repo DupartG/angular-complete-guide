@@ -1,4 +1,4 @@
-import { Component, computed, Input, signal } from '@angular/core';
+import { Component, computed, EventEmitter, Input, Output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -7,14 +7,17 @@ import { Component, computed, Input, signal } from '@angular/core';
   styleUrl: './user.css',
 })
 export class User {
+  @Input({required: true}) id!: string;
   @Input({required: true}) avatar!: string; //declare value injection from template
   @Input({required: true}) name!: string
+  @Output() select = new EventEmitter<string>(); // declare data output
+
 
   get imagePath() {
-    return 'public/' + this.avatar;
+    return 'users/' + this.avatar;
   }
 
   onSelectUser(){
-
+    this.select.emit(this.id);
   }
 }
