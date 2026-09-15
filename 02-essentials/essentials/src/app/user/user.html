@@ -1,6 +1,6 @@
-<div>
-    <button (click)= onSelectUser()> <!-- add a listener-->
-        <img [src]= imagePath [alt]="name"/> <!-- function binding + propery binding -->
-        <span>{{name}}</span> <!-- string interpolation -->
+<app-card>
+    <button [class.active] = "selected" (click)= onSelectUser()> <!-- add a listener-->
+        <img [src]= imagePath [alt]="user.name"/> <!-- function binding + propery binding -->
+        <span>{{user.name}}</span> <!-- string interpolation -->
     </button>
-</div>
+</app-card>
