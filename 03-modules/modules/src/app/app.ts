@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from './header/header';
-import { User } from './user/user';
 import { DUMMY_USERS } from '../../public/dummy.users';
-import { Tasks } from './tasks/tasks';
 
 @Component({
-  imports: [HeaderComponent, User, Tasks], // This make the header component a branch of app (the root)
-  standalone: true,
   selector: 'app-root',
+  standalone: false, // must be explicit: since Angular 19, omitting this defaults to true
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
