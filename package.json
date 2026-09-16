@@ -3,6 +3,7 @@
   "private": true,
   "workspaces": [
     "02-essentials/essentials",
-    "03-modules/modules"
+    "03-modules/modules",
+    "04-essentials-practice/essentials-practice"
   ]
 }
