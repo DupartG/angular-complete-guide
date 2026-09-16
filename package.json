@@ -1,0 +1,8 @@
+{
+  "name": "angular-complete-guide",
+  "private": true,
+  "workspaces": [
+    "02-essentials/essentials",
+    "03-modules/modules"
+  ]
+}
