@@ -10,9 +10,11 @@ Each numbered top-level folder is a **snapshot of the app for one stage of the c
 - `02-essentials/essentials/` — first real app called EasyTask, built with standalone components.
 - `03-modules/modules/` — copy of the 02 app, reworked to use NgModules instead of standalone components (this is what that lesson covers).
 - `04-essentials-practice` — brand new application.
+- `04-essentials-practice-bis` — same application as previous chapter but with modern design
+- `05-debugging` — Small chapter around debugging in Angular.
 
 
-Every folder contains a `synthesis.md` with notes on what was learned in that stage. These notes are written in English.
+Some folder contains a `synthesis.md` with notes on what was learned in that stage. These notes are written in English.
 
 ## Angular version
 
