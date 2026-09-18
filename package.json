@@ -4,6 +4,7 @@
   "workspaces": [
     "02-essentials/essentials",
     "03-modules/modules",
-    "04-essentials-practice/essentials-practice"
+    "04-essentials-practice/essentials-practice",
+    "04-essentials-practice-bis/modern"
   ]
 }
