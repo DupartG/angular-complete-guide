@@ -1,12 +1,26 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { InvestmentInputDto, InvestmentResultDto } from './investment/investment.model';
+import { InvestmentService } from './investment/investment.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: false,
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {
+export class App {//Smart component
   protected readonly title = signal('essentials-practice');
+
+  constructor(private investmentService: InvestmentService) {}
+
+  annualData: InvestmentResultDto[] = [];
+
+  onInvestmentInput(input: InvestmentInputDto) {
+    this.annualData = this.investmentService.calculate(
+      input.initialInvestment,
+      input.annualInvestment,
+      input.expectedReturn,
+      input.duration
+    );
+  }
 }
