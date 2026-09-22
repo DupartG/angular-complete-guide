@@ -13,7 +13,7 @@ Each numbered top-level folder is a **snapshot of the app for one stage of the c
 - `04-essentials-practice-bis` — same application as previous chapter but with modern design
 - `05-debugging` — Small chapter around debugging in Angular.
 - `06-components-deep-dive` — new application, focus on component.
-- `11-rjx-&-observables` — Focus on RxJs and observables
+- `11-rjxs-&-observables` — RxJs and observables
 
 
 Some folder contains a `synthesis.md` with notes on what was learned in that stage. These notes are written in English.
