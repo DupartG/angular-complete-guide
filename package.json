@@ -6,6 +6,7 @@
     "03-modules/modules",
     "04-essentials-practice/essentials-practice",
     "04-essentials-practice-bis/modern",
-    "06-components-deep-dive"
+    "06-components-deep-dive",
+    "11-rxjs _&_observables"
   ]
 }

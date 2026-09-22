@@ -9,10 +9,11 @@ Each numbered top-level folder is a **snapshot of the app for one stage of the c
 - `01-getting_started/` — intro material only, no Angular app.
 - `02-essentials/essentials/` — first real app called EasyTask, built with standalone components.
 - `03-modules/modules/` — copy of the 02 app, reworked to use NgModules instead of standalone components (this is what that lesson covers).
-- `04-essentials-practice` — brand new application.
+- `04-essentials-practice` — "Investment calculator" application
 - `04-essentials-practice-bis` — same application as previous chapter but with modern design
 - `05-debugging` — Small chapter around debugging in Angular.
 - `06-components-deep-dive` — new application, focus on component.
+- `11-rjx-&-observables` — Focus on RxJs and observables
 
 
 Some folder contains a `synthesis.md` with notes on what was learned in that stage. These notes are written in English.
