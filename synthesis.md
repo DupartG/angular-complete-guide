@@ -1,15 +1,25 @@
-# angular-complete-guide
+# What is Angular
+Angular is a framework "batteries included" which imposes an architecture and ships everything natively and integrated: HTTP client (HttpClient), routing, reactive forms, dependency injection, RxJS as its reactive backbone, and a CLI. Angular is a whole ecosystem.
 
-## DOM update
+This is why Angular feels different from other front frameworks: choices like HttpClient over Axios, or RxJS everywhere, are not arbitrary, they follow from one global architectural decision.
+In this sense, Angular looks like the "front Spring", it is as opinionated and structured as Spring, while React is more of an unopinionated UI lib you build a stack around. Angular fits large, long-lived enterprise apps and big teams, where imposed conventions keep the codebase consistent over time.
+
+## An evolving framework
+Angular has been around for years (Angular 2 in 2016, rewritten from AngularJS) and ships a new major every ~6 months. New paradigms are introduced **opt-in**: old code keeps working while you adopt the new APIs at your own pace, and the CLI provides automated migrations (`ng update` schematics). There are breaking changes across majors, but they are documented and largely auto-migrated. As a result, two axes of variants coexist in today's Angular, and both can be mixed in the same app:
+- **change detection**: Zone.js (legacy default) vs Signals (modern, enables zoneless)
+- **component packaging**: NgModules (legacy) vs Standalone components (modern default)
+
+
+### Change detection
 How Angular knows when to update the DOM:
 - With ZoneJS (still the default in most apps): Zone.js monkey-patches all async browser APIs (setTimeout, Promise, fetch/XHR, addEventListener...). When any async operation completes, Angular doesn't know what changed, so it walks the whole component tree and compares each binding against its previous value to update the DOM. Heavy, coarse-grained process.
 - Signals (introduced in v16) are reactive values that track their own consumers. Reading a signal in a template/computed/effect registers that consumer as a dependent; writing the signal notifies exactly those dependents, which then update. Fine-grained and lighter than ZoneJS, and it's what enables zoneless.
 
-Since signals, there are essentially two ways of writing Angular code, and they can be mix: legacy code work with zone, and more recent one can work signals. This means both implementation must be known !
-
-## Architecture
+### Component packaging
 In the same way, modules and standalone components are two ways to design the application and both can coexist:
-- Modules are a packaging feature, they enable accessibility of the components used (declare/imports/exports).
+- NgModules are a packaging feature, they enable accessibility of the components used (declare/imports/exports).
 - Standalone components are the modern way, they allow components to be imported one inside another. They are much less boilerplate than modules.
+Standalone components are the default since 17
 
-In both design, a good practice is to separate "dumb" and "smart" components. Smart components hold state, orchestrate,  and delegate actual business logic to services. Dumb components only receive or display data, they hold no state and no logic.
+## Component architecture
+A good practice is to separate "dumb" and "smart" components. Smart components hold state, orchestrate, and delegate actual business logic to services. Dumb components only receive or display data, they hold no state and no logic.
