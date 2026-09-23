@@ -14,6 +14,7 @@ Each numbered top-level folder is a **snapshot of the app for one stage of the c
 - `05-debugging` — Small chapter around debugging in Angular.
 - `06-components-deep-dive` — new application, focus on component.
 - `11-rjxs-&-observables` — RxJs and observables
+- `12-http-requests` — An angular application with an actual backend.
 
 
 Some folder contains a `synthesis.md` with notes on what was learned in that stage. These notes are written in English.
