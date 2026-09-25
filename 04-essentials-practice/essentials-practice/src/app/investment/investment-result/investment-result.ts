@@ -7,6 +7,6 @@ import { InvestmentResultDto } from '../investment.model';
   templateUrl: './investment-result.html',
   styleUrl: './investment-result.css',
 })
-export class InvestmentResult { //Dumb component
-  @Input({required: true}) annualData!: InvestmentResultDto[];
+export class InvestmentResult {
+  @Input({ required: true }) annualData!: InvestmentResultDto[];
 }

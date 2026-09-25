@@ -1,7 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ErrorService {
   private _error = signal('');
@@ -9,7 +9,6 @@ export class ErrorService {
   error = this._error.asReadonly();
 
   showError(message: string) {
-    console.log(message);
     this._error.set(message);
   }
 

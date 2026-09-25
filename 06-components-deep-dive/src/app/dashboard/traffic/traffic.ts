@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './traffic.css',
 })
 export class Traffic {
-    dummyTrafficData = [
+  dummyTrafficData = [
     {
       id: 'd1',
       value: 433,
@@ -38,5 +38,4 @@ export class Traffic {
     },
   ];
   maxTraffic = Math.max(...this.dummyTrafficData.map((data) => data.value));
-
 }

@@ -1,22 +1,22 @@
 <div>
-    <table>
-        <thead>
-            <tr>
-                <th>Year</th>
-                <th>Investment Value</th>
-                <th>Interest</th>
-                <th>Total Interest</th>
-                <th>Invested Capital</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let annualDataByYear of annualData">
-                <td>{{annualDataByYear.year}}</td>
-                <td>{{annualDataByYear.valueEndOfYear | currency:"EUR"}}</td>
-                <td>{{annualDataByYear.interest | currency:"EUR"}}</td>
-                <td>{{annualDataByYear.totalInterest | currency:"EUR"}}</td>
-                <td>{{annualDataByYear.totalAmountInvested | currency:"EUR"}}</td>
-            </tr>
-        </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Investment Value</th>
+        <th>Interest</th>
+        <th>Total Interest</th>
+        <th>Invested Capital</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let annualDataByYear of annualData">
+        <td>{{ annualDataByYear.year }}</td>
+        <td>{{ annualDataByYear.valueEndOfYear | currency: 'EUR' }}</td>
+        <td>{{ annualDataByYear.interest | currency: 'EUR' }}</td>
+        <td>{{ annualDataByYear.totalInterest | currency: 'EUR' }}</td>
+        <td>{{ annualDataByYear.totalAmountInvested | currency: 'EUR' }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

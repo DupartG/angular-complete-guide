@@ -1,6 +1,6 @@
 import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
-import { interval, map, Observable } from 'rxjs'; // emits sequentiel number
+import { interval, map } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,21 +9,18 @@ import { interval, map, Observable } from 'rxjs'; // emits sequentiel number
 export class App implements OnInit {
   private destroyRef = inject(DestroyRef);
   clickCount = signal(0);
-  clickCount$ = toObservable(this.clickCount); //cast signal to observable '$' at the end is common practice.
+  clickCount$ = toObservable(this.clickCount); // the '$' suffix is the convention for observables
   interval$ = interval(1000);
   intervalSignal = toSignal(this.interval$, { initialValue: 0 });
 
   ngOnInit(): void {
     const intervalSubscription = interval(1000)
       .pipe(
-        map((val) => val + 1), //start with 1 instead of 0
+        map((val) => val + 1), // interval() starts at 0
       )
       .subscribe({
-        next: (val) => console.log(val), //callback when receiving a value
-        complete: () => {}, //trigger when the observable is completed
-        error: () => {}, //trigger when an error occured
+        next: (val) => console.log(val), // `error` and `complete` handlers are optional
       });
-    //complet and error are optionnal
 
     this.destroyRef.onDestroy(() => intervalSubscription.unsubscribe());
   }

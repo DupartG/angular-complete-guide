@@ -22,8 +22,8 @@ export class App {
         input.initialInvestment,
         input.annualInvestment,
         input.expectedReturn,
-        input.duration
-      )
+        input.duration,
+      ),
     );
   }
 }

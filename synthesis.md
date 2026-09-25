@@ -21,5 +21,13 @@ In the same way, modules and standalone components are two ways to design the ap
 - Standalone components are the modern way, they allow components to be imported one inside another. They are much less boilerplate than modules.
 Standalone components are the default since 17
 
+## RxJS, the reactive backbone
+RxJS is not an add-on in Angular, it is built into the framework's own APIs. Even without writing RxJS code yourself, observables are everywhere: `HttpClient` returns an observable for each request, routing, reactive forms expose `valueChanges` and `statusChanges` as observables.
+This is the same "batteries included" logic as above: Angular picked one reactive model and used it everywhere, instead of letting each team pick its own.
+
+The arrival of signals changed that balance. The modern split is:
+- **Signals for state**: a current value the UI displays (a counter, a list, a loading flag).
+- **RxJS for events over time**: streams to combine, cancel, debounce or retry (user input, websockets, chained requests).
+
 ## Component architecture
 A good practice is to separate "dumb" and "smart" components. Smart components hold state, orchestrate, and delegate actual business logic to services. Dumb components only receive or display data, they hold no state and no logic.

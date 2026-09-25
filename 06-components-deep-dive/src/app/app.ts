@@ -7,9 +7,7 @@ import { DashboardItem } from './dashboard/dashboard-item/dashboard-item';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   templateUrl: './app.html',
   imports: [Header, ServerStatus, Traffic, Tickets, DashboardItem],
 })
-export class App {
-}
+export class App {}

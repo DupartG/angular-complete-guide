@@ -13,5 +13,4 @@ import { ErrorModal } from './shared/modal/error-modal/error-modal';
 export class App {
   private errorService = inject(ErrorService);
   error = this.errorService.error;
-  
 }

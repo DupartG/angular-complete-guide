@@ -1,4 +1,3 @@
-// This is a test file
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
 

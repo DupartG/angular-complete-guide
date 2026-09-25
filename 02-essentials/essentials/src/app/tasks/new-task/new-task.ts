@@ -15,20 +15,20 @@ export class NewTask {
   enteredTitle = '';
   enteredSummary = '';
   enteredDate = '';
-  private tasksService = inject(TasksService); //  DI modern way (14+)
-
+  private tasksService = inject(TasksService);
 
   onCancel() {
     this.close.emit();
   }
 
   onSubmit() {
-    this.tasksService.addTask({
-      title: this.enteredTitle,
-      summary: this.enteredSummary,
-      date: this.enteredDate,
-    },
-      this.userId
+    this.tasksService.addTask(
+      {
+        title: this.enteredTitle,
+        summary: this.enteredSummary,
+        date: this.enteredDate,
+      },
+      this.userId,
     );
     this.close.emit();
   }

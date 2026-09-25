@@ -1,11 +1,11 @@
 <app-places-container title="Your Favorite Places">
   @if (places.isLoading()) {
-  <p class="fallback-text">Fetching....</p>
+    <p class="fallback-text">Fetching....</p>
   } @else if (places.error()) {
-  <p class="fallback-text">Impossible to load user places</p>
+    <p class="fallback-text">Impossible to load user places</p>
   } @else if (places.hasValue() && places.value().length > 0) {
-  <app-places [places]="places.value()" (selectPlace)="onSelectPlace($event)"/>
+    <app-places [places]="places.value()" (selectPlace)="onSelectPlace($event)" />
   } @else {
-  <p class="fallback-text">Pick a place !</p>
+    <p class="fallback-text">Pick a place !</p>
   }
 </app-places-container>

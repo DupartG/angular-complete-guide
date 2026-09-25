@@ -23,7 +23,7 @@ export class NewTask {
         summary: this.enteredSummary(),
         date: this.enteredDate(),
       },
-      this.userId()
+      this.userId(),
     );
   }
 }

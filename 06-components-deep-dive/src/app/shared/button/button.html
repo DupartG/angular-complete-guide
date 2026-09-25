@@ -1,8 +1,9 @@
 <span>
-    <ng-content />
+  <ng-content />
 </span>
 <span class="icon">
-    <ng-content select="icon"> <!-- Act as a css selector. Define a fallback -->
-        ⌲
-    </ng-content>
+  <ng-content select="icon">
+    <!-- ⌲ is the fallback when nothing is projected -->
+    ⌲
+  </ng-content>
 </span>
