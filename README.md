@@ -51,10 +51,10 @@ npm test -w <workspace-name>     # runs the Vitest unit tests for that app
 
 | Workspace name | Folder |
 |---|---|
-| `essentials` | `02-essentials/essentials` |
-| `modules` | `03-modules/modules` |
-| `essentials-practice` | `04-essentials-practice/essentials-practice` |
-| `modern` | `04-essentials-practice-bis/modern` |
+| `essentials` | `02-essentials` |
+| `modules` | `03-modules` |
+| `essentials-practice` | `04-essentials-practice` |
+| `modern` | `04-essentials-practice-bis` |
 | `components-deep-dive` | `06-components-deep-dive` |
 | `rxjs-observables` | `11-rxjs-&-observables` |
 | `http-requests` | `12-HTTP-requests/http-requests` |

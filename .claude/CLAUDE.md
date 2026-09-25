@@ -1,20 +1,23 @@
 # angular-complete-guide
 
-This repo follows the Udemy course [The Complete Guide to Angular](https://www.udemy.com/course/the-complete-guide-to-angular-2/). It is being built as a **portfolio piece for recruiters**, so code quality and clarity matter beyond just "does it work".
+This repo follows the Udemy course [The Complete Guide to Angular](https://www.udemy.com/course/the-complete-guide-to-angular-2/).
 
 ## Repository structure
 
 Each numbered top-level folder is a chapter of the course:
 
 - `01-getting_started/` — intro material only, no Angular app.
-- `02-essentials/essentials/` — first real app called EasyTask, built with standalone components.
-- `03-modules/modules/` — copy of the 02 app, reworked to use NgModules instead of standalone components (this is what that lesson covers).
+- `02-essentials/` — first real app called EasyTask, built with standalone components.
+- `03-modules/` — copy of the 02 app, reworked to use NgModules instead of standalone components (this is what that lesson covers).
 - `04-essentials-practice` — "Investment calculator" application
 - `04-essentials-practice-bis` — same application as previous chapter but with modern design
 - `05-debugging` — Small chapter around debugging in Angular.
 - `06-components-deep-dive` — new application, focus on component.
-- `11-rjxs-&-observables` — RxJs and observables
-- `12-http-requests` — An angular application with an actual backend.
+- `11-rxjs-&-observables` — RxJs and observables
+- `12-HTTP-requests` — An angular application with an actual backend.
+- `14-routing` — EasyTask app, reworked to use the router.
+
+Each Angular app lives directly at the root of its chapter folder (`angular.json`, `package.json`, `src/` next to `synthesis.md`), never in a nested subfolder. The only exception is `12-HTTP-requests/`, which holds two projects side by side: `backend/` (Express API) and `http-requests/` (the Angular app).
 
 
 Some folder contains a `synthesis.md` with notes on what was learned in that stage. These notes are written in English.
