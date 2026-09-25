@@ -4,7 +4,7 @@ This repo follows the Udemy course [The Complete Guide to Angular](https://www.u
 
 ## Repository structure
 
-Each numbered top-level folder is a **snapshot of the app for one stage of the course**:
+Each numbered top-level folder is a chapter of the course:
 
 - `01-getting_started/` — intro material only, no Angular app.
 - `02-essentials/essentials/` — first real app called EasyTask, built with standalone components.
