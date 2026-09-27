@@ -2,10 +2,11 @@ import { Component, inject, input, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { TasksService } from '../tasks.service';
+import { CanDeactivateFn, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-new-task',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './new-task.html',
   styleUrl: './new-task.css',
 })
@@ -14,7 +15,9 @@ export class NewTask {
   enteredTitle = signal('');
   enteredSummary = signal('');
   enteredDate = signal('');
+  submitted = false;
   private tasksService = inject(TasksService);
+  private router = inject(Router);
 
   onSubmit() {
     this.tasksService.addTask(
@@ -25,5 +28,18 @@ export class NewTask {
       },
       this.userId(),
     );
+
+    this.submitted = true;
+    this.router.navigate(['/users', this.userId(), 'tasks'], {
+      replaceUrl: true,
+    }); //trigger redirection
   }
 }
+
+export const canLeaveEditPage: CanDeactivateFn<NewTask> = (component) => {
+  if (component.submitted) return true;
+  if (component.enteredTitle() || component.enteredDate()) {
+    return window.confirm('Entered data will be lost');
+  }
+  return true;
+};
