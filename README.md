@@ -27,7 +27,7 @@ This repo is my hands-on work for the Udemy course [The Complete Guide to Angula
 | 06 | [`06-components-deep-dive`](06-components-deep-dive) | **Admin dashboard** | Splitting a UI into reusable components, attribute selectors to extend native elements, content projection with `ng-content` *(in progress)* |
 | 11 | [`11-rxjs-&-observables`](11-rxjs-&-observables) | RxJS playground | Observables, operators, subscription cleanup, `toSignal()` / `toObservable()`, signals vs observables |
 | 12 | [`12-HTTP-requests`](12-HTTP-requests) | **Places picker** + Express API | `HttpClient`, error handling, optimistic updates. The course pattern and an "enterprise" pattern (`httpResource`) are shown side by side |
-| 14 | [`14-routing`](14-routing) | EasyTask (routed) | Adding routing to the EasyTask app *(in progress)* |
+| 14 | [`14-routing`](14-routing) | EasyTask (routed) | Route params bound to `input()`, nested child routes, `routerLink` / `routerLinkActive`, programmatic navigation, resolvers, route titles, `canMatch` / `canDeactivate` guards, 404 fallback |
 
 I went for breadth: seeing every major feature Angular offers, instead of spending weeks on a single topic. That's why some chapters are skipped.
 
@@ -37,6 +37,7 @@ These are the best places to start if you're reviewing the code:
 
 - **[12-HTTP-requests](12-HTTP-requests/synthesis.md).** `AvailablePlaces` uses the course pattern: manual `isFetching` / `error` signals, `DestroyRef`, `catchError`. `UserPlaces` does the same job with `httpResource()`: no manual state, no subscription to clean up. The synthesis explains the trade-offs and caveats.
 - **[04 vs 04 bis](04-essentials-practice-bis).** The same investment calculator written twice, with NgModules + decorators and then with standalone components + signals.
+- **[14-routing](14-routing/src/app/app.routes.ts).** The EasyTask app rebuilt around routing features provided by Angular.
 - **[Root synthesis](synthesis.md).** My overview of how Angular is designed and why it feels like "the Spring of the frontend".
 
 ## Running an app
