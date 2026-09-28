@@ -15,6 +15,7 @@ Each numbered top-level folder is a chapter of the course:
 - `06-components-deep-dive` — new application, focus on component.
 - `11-rxjs-&-observables` — RxJs and observables
 - `12-HTTP-requests` — An angular application with an actual backend.
+- `13-reactive-forms` — Login/signup forms, template-driven and reactive forms (work in progress).
 - `14-routing` — EasyTask app, reworked to use the router.
 
 Each Angular app lives directly at the root of its chapter folder (`angular.json`, `package.json`, `src/` next to `synthesis.md`), never in a nested subfolder. The only exception is `12-HTTP-requests/`, which holds two projects side by side: `backend/` (Express API) and `http-requests/` (the Angular app).

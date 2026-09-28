@@ -27,6 +27,7 @@ This repo is my hands-on work for the Udemy course [The Complete Guide to Angula
 | 06 | [`06-components-deep-dive`](06-components-deep-dive) | **Admin dashboard** | Splitting a UI into reusable components, attribute selectors to extend native elements, content projection with `ng-content` *(in progress)* |
 | 11 | [`11-rxjs-&-observables`](11-rxjs-&-observables) | RxJS playground | Observables, operators, subscription cleanup, `toSignal()` / `toObservable()`, signals vs observables |
 | 12 | [`12-HTTP-requests`](12-HTTP-requests) | **Places picker** + Express API | `HttpClient`, error handling, optimistic updates. The course pattern and an "enterprise" pattern (`httpResource`) are shown side by side |
+| 13 | [`13-reactive-forms`](13-reactive-forms) | **Auth forms** (login / signup) | Template-driven vs reactive forms: `FormGroup`, `FormControl`, validators *(in progress)* |
 | 14 | [`14-routing`](14-routing) | EasyTask (routed) | Route params bound to `input()`, nested child routes, `routerLink` / `routerLinkActive`, programmatic navigation, resolvers, route titles, `canMatch` / `canDeactivate` guards, 404 fallback |
 
 I went for breadth: seeing every major feature Angular offers, instead of spending weeks on a single topic. That's why some chapters are skipped.
@@ -59,6 +60,7 @@ npm test -w <workspace-name>     # runs the Vitest unit tests for that app
 | `components-deep-dive` | `06-components-deep-dive` |
 | `rxjs-observables` | `11-rxjs-&-observables` |
 | `http-requests` | `12-HTTP-requests/http-requests` |
+| `reactive-forms` | `13-reactive-forms` |
 | `routing` | `14-routing` |
 
 Chapter 12 also needs its backend running on port 3000:

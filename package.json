@@ -9,6 +9,7 @@
     "06-components-deep-dive",
     "11-rxjs-&-observables",
     "12-HTTP-requests/http-requests",
+    "13-reactive-forms",
     "14-routing"
   ]
 }
